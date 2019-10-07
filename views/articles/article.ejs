@@ -1,0 +1,18 @@
+<% include ../partials/header.ejs %>
+    <div class="container-fluid">
+        <h2>News</h2>
+        <div class="articles container-fluid">
+            <% articles.forEach(article => { %>
+                <img src="/img/article_image/<%= article.image %>" alt="article_image">
+                <div class="boxi">
+                <a href="/article/<%= article.ID %>"><h3 class="article-header"><%= article.title %></h3></a>
+                <p class="text-muted font-italic">Written by <%= article.username %> on <%= moment(article.updated_at).calendar() %></p>
+                <p ><%= article.content %></p>
+                <form action="/article/<%= article.ID %>?_method=DELETE" method="POST">
+                    <button type="submit" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+                </form>
+            </div>
+            <% }); %>
+        </div>
+    </div>
+<% include ../partials/footer.ejs %>

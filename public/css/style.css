@@ -1,0 +1,29 @@
+.container{
+    
+}
+.banner{
+    height: 100px;
+    background: url('/img/mount.jpg') center / cover no-repeat;
+}
+.content{
+    padding: 10px 0;
+}
+.articles-container{
+    padding: 0;
+}
+.pagination{
+    text-align: center;
+}
+.boxi{
+    border: 2px solid black;
+    margin-top: 20px;
+}
+.footer{
+    display: block;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
